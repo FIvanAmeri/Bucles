@@ -3,7 +3,6 @@ function productoEntreNúmeros(a, b) {
   // los números entre a y b (inclusive).
   // Tu código:
 
-  
   if (a === 0 || b === 0) {
     return 0;
   }
@@ -11,6 +10,10 @@ function productoEntreNúmeros(a, b) {
   var producto = 1;
   var inicio = Math.min(a, b);
   var fin = Math.max(a, b);
+
+  if (inicio < 0 && fin > 0) {
+    return 0;
+  }
 
   for (var i = inicio; i <= fin; i++) {
     producto *= i;
